@@ -1,0 +1,10 @@
+from https://learnyousomeerlang.com/the-count-of-applications
+
+1. =erl -make= each application
+2. start erlang by =erl -env ERL_LIBS "."=
+3. start apps in correct order =application:start(ppool), application:start(erlcount).=
+
+- we can override env variables like
+  #+BEGIN_SRC shell
+  erl -env ERL_LIBS "." -erlcount directory '"/some/place/"' regex '["foo","bar"]'
+  #+END_SRC
